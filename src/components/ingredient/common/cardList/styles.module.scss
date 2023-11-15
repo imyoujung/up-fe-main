@@ -1,0 +1,48 @@
+@import '@styles/common';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid $Grey_Scale_100;
+
+  .img {
+    margin-right: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .title {
+      @include fontStyle($Body_XL, $Grey_Scale_Black);
+    }
+
+    .description {
+      @include fontStyle($Body_L, $Grey_Scale_500);
+    }
+
+    .abv {
+      @include fontStyle($Caption_XL, $Solid_Primary_700);
+    }
+  }
+
+  .btn {
+    padding: 0.25rem 0.75rem;
+    background-color: $Grey_Scale_100;
+    border-radius: 0.25rem;
+    @include fontStyle($Body_L, $Grey_Scale_900);
+
+    .isAdded {
+      background-color: $Solid_Primary_500;
+      color: $Grey_Scale_White;
+    }
+  }
+}

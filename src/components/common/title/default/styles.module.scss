@@ -1,0 +1,13 @@
+@import '@styles/common';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  @include fontStyle($Heading_XL, $Grey_Scale_Black);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &.isShadow {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  }
+}

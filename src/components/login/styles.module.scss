@@ -1,0 +1,45 @@
+@import '@styles/common';
+$ImgPath: $Img_Path + '/login';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 2.88rem;
+  background-color: $Grey_Scale_900;
+}
+
+.title {
+  padding: 1.25rem 2rem;
+  @include fontStyle($Heading_XL, $Grey_Scale_White);
+}
+
+.imgArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 385px;
+}
+
+.loginTitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  @include fontStyle($Heading_XS, $Grey_Scale_White);
+}
+.socialLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.socialLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 3.125rem;
+}

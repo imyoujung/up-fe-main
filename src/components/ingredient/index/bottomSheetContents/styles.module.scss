@@ -1,0 +1,12 @@
+@import '@styles/common';
+
+.title {
+  @include fontStyle($Heading_M, $Grey_Scale_Black);
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.62rem;
+}

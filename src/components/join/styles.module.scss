@@ -1,0 +1,45 @@
+@import '@styles/common';
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  padding-top: 3.25rem;
+}
+
+.inputField {
+  margin-top: 1.94rem;
+}
+
+.cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.noticeArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+
+  .notice {
+    display: none;
+    align-items: center;
+    @include fontStyle($Body_L, $Grey_Scale_500);
+
+    &.default {
+      display: flex;
+    }
+
+    &.success {
+      display: flex;
+      @include fontStyle($Body_L, $Solid_Primary_500);
+    }
+
+    &.error {
+      display: flex;
+      @include fontStyle($Body_L, $Solid_Red_500);
+    }
+  }
+}

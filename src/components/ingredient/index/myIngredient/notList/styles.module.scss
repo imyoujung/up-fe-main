@@ -1,0 +1,30 @@
+@import '@styles/common';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  @include fontStyle($Body_XXL, $Grey_Scale_400);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6.4375rem;
+  height: 2.625rem;
+  padding: 0.88rem 0.63rem 0.88rem 0.88rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  background-color: $Solid_Primary_500;
+  @include fontStyle($Heading_XS, $Grey_Scale_White);
+}

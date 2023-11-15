@@ -1,0 +1,48 @@
+@import '@styles/common.scss';
+
+.toastArea {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transform: translate(-50%, 0);
+  width: fit-content;
+  height: fit-content;
+  padding: 0.75rem 1.13rem 0.75rem 0.88rem;
+  border-radius: 0.5rem;
+  background: rgba(26, 26, 26, 0.85);
+  z-index: $Z_INDEX_MAX;
+  animation:
+    fadeIn 0.5s ease-out forwards,
+    fadeOut 0.5s ease-in forwards;
+  animation-delay: 0s, 2.5s; // fadeOut starts after fadeIn and 2 seconds of display
+}
+
+.text {
+  white-space: nowrap;
+  @include fontStyle($Body_L, $Grey_Scale_White);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}

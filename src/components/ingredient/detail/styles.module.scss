@@ -1,0 +1,13 @@
+@import '@styles/common';
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $Grey_Scale_White;
+  z-index: $Z_INDEX_FIXED;
+}
+
+.title {
+  padding: 0.88rem 1.25rem;
+  @include fontStyle($Heading_L, $Grey_Scale_Black);
+}

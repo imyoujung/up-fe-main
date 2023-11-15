@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@api": ["src/api/index"],
+      "@assets/*": ["src/assets/*"],
+      "@common/*": ["src/components/common/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@interface/*": ["src/interface/*"],
+      "@pages/*": ["src/pages/*"],
+      "@query/*": ["src/query/*"],
+      "@repository/*": ["src/repository/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  }
+}

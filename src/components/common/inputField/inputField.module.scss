@@ -1,0 +1,82 @@
+@import '@styles/common';
+
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 20rem;
+  height: 3rem;
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid $Grey_Scale_600;
+  @include fontStyle($Body_XL, $Grey_Scale_Black);
+
+  &:not(:focus).hasValue {
+    color: $Grey_Scale_Black;
+  }
+
+  &:focus {
+    border-color: $Solid_Primary_500;
+  }
+
+  &.isError {
+    border-color: $Solid_Red_500;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 0.88rem;
+  transform: translateY(-50%) scale(1);
+  transform-origin: left center;
+  transition: all ease-out 0.2s;
+  opacity: 1;
+  pointer-events: none;
+  @include fontStyle($Body_XL_Rg, $Grey_Scale_600);
+
+  .input:focus + &,
+  .input.hasValue + & {
+    top: 0;
+    transform: translateY(-50%) scale(0.2);
+  }
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 0.51rem;
+  padding: 0 0.37rem;
+  background-color: $Grey_Scale_White;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-out 0.2s;
+  @include fontStyle($Body_S, $Grey_Scale_Black);
+
+  &.isError {
+    color: $Solid_Red_500;
+  }
+
+  .input:focus ~ &,
+  .input.hasValue ~ & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .input:focus ~ & {
+    color: $Solid_Primary_500;
+
+    &.isError {
+      color: $Solid_Red_500;
+    }
+  }
+
+  .input:not(:focus):not(.hasValue) ~ & {
+    opacity: 0;
+    transition-delay: 0s;
+    visibility: hidden;
+  }
+}

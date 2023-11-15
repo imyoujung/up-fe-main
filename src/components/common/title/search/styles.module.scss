@@ -1,0 +1,9 @@
+@import '@styles/common';
+
+.searchTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0.88rem 0.75rem 1.25rem;
+  @include fontStyle($Heading_XL, $Grey_Scale_Black);
+}

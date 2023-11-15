@@ -1,0 +1,94 @@
+@import '@styles/color';
+
+$Heading_XXL: 'Heading_XXL';
+$Heading_XL: 'Heading_XL';
+$Heading_L: 'Heading_L';
+$Heading_M: 'Heading_M';
+$Heading_S: 'Heading_S';
+$Heading_XS: 'Heading_XS';
+$Body_XXL: 'Body_XXL';
+$Body_XL: 'Body_XL';
+$Body_XL_Rg: 'Body_XL_Rg';
+$Body_L: 'Body_L';
+$Body_L_Bd: 'Body_L_Bd';
+$Body_M: 'Body_M';
+$Body_M_Rg: 'Body_M_Rg';
+$Body_S: 'Body_S';
+$Caption_L_Bd: 'Caption_L_Bd';
+$Caption_L: 'Caption_L';
+$Caption_XL: 'Caption_XL';
+
+@mixin fontStyle($TYPE: $Heading_XXL, $COLOR: $Solid_Primary_1000) {
+  color: $COLOR;
+  letter-spacing: -0.01rem;
+
+  @if ($TYPE == $Heading_XXL) {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 36px;
+  } @else if ($TYPE == $Heading_XL) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  } @else if ($TYPE == $Heading_L) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  } @else if ($TYPE == $Heading_M) {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  } @else if ($TYPE == $Heading_S) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  } @else if ($TYPE == $Heading_XS) {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+  } @else if ($TYPE == $Body_XXL) {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  } @else if ($TYPE == $Body_XL) {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+  } @else if ($TYPE == $Body_XL_Rg) {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+  } @else if ($TYPE == $Body_L) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  } @else if ($TYPE == $Body_L_Bd) {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+  } @else if ($TYPE == $Body_M) {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+  } @else if ($TYPE == $Body_M_Rg) {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+  } @else if ($TYPE == $Body_S) {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  } @else if ($TYPE == $Caption_L_Bd) {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+  } @else if ($TYPE == $Caption_L) {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  } @else if ($TYPE == $Caption_XL) {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+}

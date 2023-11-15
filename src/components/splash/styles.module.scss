@@ -1,0 +1,11 @@
+@import '@styles/common';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $Grey_Scale_900;
+  @include fontStyle($Heading_XL, $Grey_Scale_White);
+}

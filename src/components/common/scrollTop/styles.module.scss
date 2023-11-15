@@ -1,0 +1,21 @@
+@import '@styles/common';
+
+// 페이지 top 버튼
+.topBtn {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 7.44rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid $Grey_Scale_400;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  z-index: $Z_INDEX_FIXED;
+
+  &.hidden {
+    visibility: hidden;
+  }
+}
